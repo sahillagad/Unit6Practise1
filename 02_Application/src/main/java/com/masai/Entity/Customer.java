@@ -1,0 +1,117 @@
+package com.masai.Entity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.ElementCollection;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Customer {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+ private Integer cid;
+ private String name;
+ private String mobileName;
+ private String email;
+ 
+ 
+ @Embedded
+ @ElementCollection
+ private List<Address> addresses=new ArrayList<>();
+
+
+public Customer(Integer cid, String name, String mobileName, String email, List<Address> addresses) {
+	super();
+	this.cid = cid;
+	this.name = name;
+	this.mobileName = mobileName;
+	this.email = email;
+	this.addresses = addresses;
+}
+
+
+public Customer() {
+	super();
+}
+
+
+public Customer(String name, String mobileName, String email, List<Address> addresses) {
+	super();
+	this.name = name;
+	this.mobileName = mobileName;
+	this.email = email;
+	this.addresses = addresses;
+}
+
+
+public Integer getCid() {
+	return cid;
+}
+
+
+public void setCid(Integer cid) {
+	this.cid = cid;
+}
+
+
+public String getName() {
+	return name;
+}
+
+
+public void setName(String name) {
+	this.name = name;
+}
+
+
+public String getMobileName() {
+	return mobileName;
+}
+
+
+public void setMobileName(String mobileName) {
+	this.mobileName = mobileName;
+}
+
+
+public String getEmail() {
+	return email;
+}
+
+
+public void setEmail(String email) {
+	this.email = email;
+}
+
+
+public List<Address> getAddresses() {
+	return addresses;
+}
+
+
+public void setAddresses(List<Address> addresses) {
+	this.addresses = addresses;
+}
+
+
+@Override
+public String toString() {
+	return "Customer [cid=" + cid + ", name=" + name + ", mobileName=" + mobileName + ", email=" + email
+			+ ", addresses=" + addresses + "]";
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+}
