@@ -1,0 +1,55 @@
+package com.masai.Entity;
+
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "TypeOfEmployee",discriminatorType = DiscriminatorType.INTEGER)
+@DiscriminatorValue(value = "1")
+public class Employee {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer empId;
+	private String name;
+	public Employee(Integer empId, String name) {
+		super();
+		this.empId = empId;
+		this.name = name;
+	}
+	public Employee(String name) {
+		super();
+		this.name = name;
+	}
+	public Employee() {
+		super();
+	}
+	public Integer getEmpId() {
+		return empId;
+	}
+	public void setEmpId(Integer empId) {
+		this.empId = empId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", name=" + name + "]";
+	}
+	
+	
+	
+	
+}
