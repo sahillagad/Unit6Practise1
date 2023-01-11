@@ -1,0 +1,80 @@
+package com.masai.Usecase;
+
+import java.util.Scanner;
+
+import com.masai.Dao.StudentDao;
+import com.masai.Dao.StudentDaoImpl;
+import com.masai.Entity.Collage;
+import com.masai.Entity.Student;
+
+public class RegisteredCollage {
+
+	
+	public static void main(String[] args) {
+		
+		
+		Scanner sc=new Scanner(System.in);
+		
+		
+		
+		System.out.println("Enter College Name");
+		String collegeName= sc.next();
+		
+		System.out.println("Enter College Address");
+	    String collegeAddress=sc.next();
+	    
+	    
+	    Collage collage=new Collage();
+	    collage.setCollageName(collegeName);
+	    collage.setCollageAddress(collegeAddress);
+	    
+	    System.out.println("You Want To Add Student(Y/N)");
+	    String rs=sc.next();
+	    
+	    while(rs.equalsIgnoreCase("Y")) {
+	    	
+	         	
+	    
+	    	System.out.println("Enter Student Name");
+	    	String name= sc.next();
+	    	
+	    	System.out.println("Enter Mobile Number");
+            String mobileNo=sc.next();
+	    	
+	    	System.out.println("Enter email"); 
+	    	String email=sc.next();
+	          
+	    	Student student=new Student(name, mobileNo, email,collage);
+	    	collage.getStudents().add(student);
+	    	
+		    System.out.println("You Want To Add One More Student(Y/N)");
+		    String result=sc.next();
+	    	
+	  
+		    if(result.equalsIgnoreCase("N")) {
+		    	
+		    	break;
+		    }
+	    }
+		
+	
+		
+		
+		
+		
+	   StudentDao dao=new StudentDaoImpl();
+	   dao.registeredCollege(collage);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+}

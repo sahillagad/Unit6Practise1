@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;20_SpringApplication&apos;&#x0D;&#x0A;- Original project: &apos;20_SpringApplication&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.masai.A.java&#x0D;&#x0A;     com.masai.B.java&#x0D;&#x0A;     com.masai.Demo.java" description="Delete elements" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.masai{B.java" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.masai{Demo.java" element3="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.masai{A.java" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1673238121821" subPackages="false" version="1.0"/>
+</session>

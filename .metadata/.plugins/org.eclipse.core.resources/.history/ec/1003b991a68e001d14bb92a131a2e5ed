@@ -1,0 +1,34 @@
+package com.masai.Dao;
+
+import com.masai.Entity.Student;
+
+public class StudentDaoImpl implements StudentDao {
+
+	@Override
+	public String registeredStudent(Student student) {
+	
+		
+
+		return null;
+	}
+
+	@Override
+	public String UpdateStudent(Student student) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Student getStudentById(Integer roll) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteStudentBYID(Integer roll) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

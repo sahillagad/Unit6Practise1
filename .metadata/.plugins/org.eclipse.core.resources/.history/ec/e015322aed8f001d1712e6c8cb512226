@@ -1,0 +1,73 @@
+package com.masai.dao;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.stream.Stream;
+
+public class PersonService {
+	
+	
+	private Map<Person, Skill> skillMap=new HashMap<Person, Skill>();
+	private List<Person> personList=new ArrayList<Person>();
+	
+	
+	
+	
+	public void setSkillMap(Map<Person, Skill> skillMap) {
+		this.skillMap = skillMap;
+	}
+
+
+	public void setPersonList(List<Person> personList) {
+		this.personList = personList;
+	}
+
+
+	public void printSkillMap(){
+
+ 	Set<Entry<Person, Skill>> entries=	skillMap.entrySet();
+		
+ 	
+ 	for(Entry<Person, Skill> entry:entries) {
+ 		
+ 		System.out.println(entry.getKey()+" "+entry.getValue());
+ 		
+ 	}
+ 	
+   }
+	
+	
+	public void printPersonList(){
+	
+		
+List<Person> stream= personList.stream().sorted((o1, o2) -> {
+	
+	if(o1.getAge()>o2.getAge()) {
+		
+		return 0;
+	}
+	else {
+		
+		return 1;
+	}
+	
+	
+}).toList();
+
+	for(Person person:stream) {
+		
+		System.out.println(person);
+	}
+	
+	
+	}
+	
+	
+	
+	
+}

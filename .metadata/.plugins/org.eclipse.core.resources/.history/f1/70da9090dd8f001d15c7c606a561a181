@@ -1,0 +1,20 @@
+package com.masai;
+
+public class Travel {
+
+	private Vechical vechical;
+	private Integer NoofPerson;
+
+
+	
+	public void journy() {
+		
+		System.err.println("Start Journy");
+		vechical.Go();
+		System.out.println("Number Of Person "+NoofPerson);
+		
+	}
+	
+	
+	
+}
