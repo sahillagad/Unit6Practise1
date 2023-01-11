@@ -1,0 +1,12 @@
+package Example1;
+
+public class A {
+
+	
+	public void funA() {
+		
+		System.out.println("I Am Inside the funA");
+	}
+	
+	
+}

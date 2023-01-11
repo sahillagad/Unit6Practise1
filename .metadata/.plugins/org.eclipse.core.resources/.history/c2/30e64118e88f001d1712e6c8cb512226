@@ -1,0 +1,61 @@
+package com.masai.dao;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class PersonService {
+	
+	
+	private Map<Person, Skill> skillMap=new HashMap<Person, Skill>();
+	private List<Person> personList=new ArrayList<Person>();
+	
+	public void printSkillMap(){
+
+ 	Set<Entry<Person, Skill>> entries=	skillMap.entrySet();
+		
+ 	
+ 	for(Entry<Person, Skill> entry:entries) {
+ 		
+ 		System.out.println(entry.getKey()+" "+entry.getValue());
+ 		
+ 	}
+ 	
+   }
+	
+	
+	public void printPersonList(){
+
+		
+		
+		Comparator<Person> comparator=new Comparator<Person>() {
+			
+			public int compare(Person o1, Person o2) {
+				if(o1.getAge()>o2.getAge()) {
+				return 0;
+				}
+				else {
+					
+					return 1;
+				}
+			}
+		};
+		
+	personList.sort(comparator);
+
+	for(Person person:personList) {
+		
+		System.out.println(person.getAge());
+	}
+	
+	
+	}
+	
+	
+	
+	
+}

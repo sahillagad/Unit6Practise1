@@ -1,0 +1,43 @@
+package com.masai.Usecase;
+
+import java.util.Scanner;
+
+public class RegisteredStudent {
+
+	
+	public static void main(String[] args) {
+		
+		
+		Scanner sc=new Scanner(System.in);
+		
+		
+		
+		System.out.println("Enter College Name");
+		String collegeName= sc.next();
+		
+		System.out.println("Enter College Address");
+	    String collegeAddress=sc.next();
+	    
+	    
+	    
+	    System.out.println("You Want To Add Student(Y/N)");
+	    
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+}

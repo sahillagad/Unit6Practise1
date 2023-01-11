@@ -1,0 +1,22 @@
+package com.masai;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class MessageProcessorImpl implements MessageProcessor{
+
+	@Autowired
+	@Qualifier(value ="sMSService")
+	MessageService messageService;
+
+	@Override
+	public void processMessage(String message) {
+		
+		messageService.sendMessage(message);
+		
+	}
+
+
+}

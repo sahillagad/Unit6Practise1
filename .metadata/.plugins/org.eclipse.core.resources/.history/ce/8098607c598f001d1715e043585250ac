@@ -1,0 +1,45 @@
+package com.masai.Entity;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
+
+@Entity
+@PrimaryKeyJoinColumn(name = "SalaryEmployeeId")
+public class SalaryEmployee extends Employee{
+	
+	private Integer salary;
+
+	public SalaryEmployee(Integer empId, String name, Integer salary) {
+		super(empId, name);
+		this.salary = salary;
+	}
+
+	public SalaryEmployee(String name, Integer salary) {
+		super(name);
+		this.salary = salary;
+	}
+
+	public SalaryEmployee(Integer empId, String name) {
+		super(empId, name);
+	}
+
+	public Integer getSalary() {
+		return salary;
+	}
+
+	public void setSalary(Integer salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "SalaryEmployee [salary=" + salary + "]";
+	}
+	
+
+	
+	 
+	
+	
+}

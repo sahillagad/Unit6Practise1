@@ -1,0 +1,14 @@
+package Example1;
+
+public class Travel {
+
+	Car car=new Car();
+	
+	public void journey() {
+		
+		System.out.println("Hello My Name Is sahil & I am ");
+		car.start();
+	}
+	
+	
+}

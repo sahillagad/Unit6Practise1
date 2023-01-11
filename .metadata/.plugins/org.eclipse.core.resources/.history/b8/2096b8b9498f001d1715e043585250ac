@@ -1,0 +1,13 @@
+package com.masai.Entity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class ContractualEmployee {
+
+	private Integer NoOfWorkingDay;
+	private Integer CostPerDay;
+	
+	
+	
+}

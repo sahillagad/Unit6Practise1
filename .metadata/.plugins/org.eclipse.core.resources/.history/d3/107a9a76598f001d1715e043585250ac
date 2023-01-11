@@ -1,0 +1,46 @@
+package com.masai.Entity;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
+
+@Entity
+@PrimaryKeyJoinColumn(name = "ContractualEmployeeId")
+public class ContractualEmployee extends Employee  {
+
+	private Integer NoOfWorkingDay;
+	private Integer CostPerDay;
+	public ContractualEmployee(Integer empId, String name, Integer noOfWorkingDay, Integer costPerDay) {
+		super(empId, name);
+		NoOfWorkingDay = noOfWorkingDay;
+		CostPerDay = costPerDay;
+	}
+	public ContractualEmployee(String name, Integer noOfWorkingDay, Integer costPerDay) {
+		super(name);
+		NoOfWorkingDay = noOfWorkingDay;
+		CostPerDay = costPerDay;
+	}
+	public ContractualEmployee() {
+		super();
+	}
+	public Integer getNoOfWorkingDay() {
+		return NoOfWorkingDay;
+	}
+	public void setNoOfWorkingDay(Integer noOfWorkingDay) {
+		NoOfWorkingDay = noOfWorkingDay;
+	}
+	public Integer getCostPerDay() {
+		return CostPerDay;
+	}
+	public void setCostPerDay(Integer costPerDay) {
+		CostPerDay = costPerDay;
+	}
+	@Override
+	public String toString() {
+		return "ContractualEmployee [NoOfWorkingDay=" + NoOfWorkingDay + ", CostPerDay=" + CostPerDay + "]";
+	}
+
+	
+	
+	
+}

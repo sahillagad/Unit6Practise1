@@ -1,0 +1,35 @@
+package com.masai.Dao;
+
+import java.util.List;
+
+import com.masai.Entity.Address;
+import com.masai.Entity.Customer;
+
+public class CustomerDaoImpl implements CustomerDao{
+
+	@Override
+	public String registeredCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Customer getCustomerById(Integer cid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Address> getCustomeAddressrById(Integer cid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String AddAddressToCustomer(Integer cid, Address address) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

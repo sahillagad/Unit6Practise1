@@ -1,0 +1,24 @@
+package com.masai.Usecase;
+
+import java.util.Scanner;
+
+public class GetCollage {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter College Id");
+		Integer collageId= sc.nextInt();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

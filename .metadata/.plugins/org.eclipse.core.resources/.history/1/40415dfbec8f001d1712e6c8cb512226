@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+
+       
+       <bean id="p" class="com.masai.dao.Person">
+       <constructor-arg name="id" value="1"/>
+       <constructor-arg name="name" value="Sahil"/>
+       <constructor-arg name="age" value="21"/>
+         <constructor-arg name="email" value="Sahil@gmail.com"/>
+           <constructor-arg name="mobile" value="987654321"/>
+       </bean>
+           
+           
+           
+       <bean id="p1" class="com.masai.dao.Person">
+       <constructor-arg name="id" value="2"/>
+       <constructor-arg name="name" value="Ram"/>
+       <constructor-arg name="age" value="27"/>
+         <constructor-arg name="email" value="Ram@gmail.com"/>
+           <constructor-arg name="mobile" value="887654321"/>
+       </bean>
+       
+             <bean id="p2" class="com.masai.dao.Person">
+       <constructor-arg name="id" value="3"/>
+       <constructor-arg name="name" value="Tom"/>
+       <constructor-arg name="age" value="15"/>
+         <constructor-arg name="email" value="Tom@gmail.com"/>
+           <constructor-arg name="mobile" value="787654321"/>
+       </bean>
+       
+       
+
+        <bean id="p3" class="com.masai.dao.Person">
+       <constructor-arg name="id" value="4"/>
+       <constructor-arg name="name" value="Rani"/>
+       <constructor-arg name="age" value="10"/>
+         <constructor-arg name="email" value="Rani@gmail.com"/>
+           <constructor-arg name="mobile" value="687654321"/>
+       </bean>
+               <bean id="p4" class="com.masai.dao.Person">
+       <constructor-arg name="id" value="5"/>
+       <constructor-arg name="name" value="Jarry"/>
+       <constructor-arg name="age" value="17"/>
+         <constructor-arg name="email" value="Jarry@gmail.com"/>
+           <constructor-arg name="mobile" value="987654321"/>
+       </bean>
+
+
+<bean id="S1" class="com.masai.dao.Skill">
+<constructor-arg name="id" value="1"/>
+<constructor-arg name="name" value="Java"/>
+<constructor-arg name="yearsOfExperience" value="12"/>
+
+</bean>
+
+<bean id="S2" class="com.masai.dao.Skill">
+<constructor-arg name="id" value="2"/>
+<constructor-arg name="name" value="ReactJs"/>
+<constructor-arg name="yearsOfExperience" value="10"/>
+
+</bean>
+
+
+
+<bean id="S3" class="com.masai.dao.Skill">
+<constructor-arg name="id" value="3"/>
+<constructor-arg name="name" value="AngularJs"/>
+<constructor-arg name="yearsOfExperience" value="5"/>
+
+</bean>
+
+ <bean id="PS" class="com.masai.dao.PersonService">
+    <property name="skillMap">
+    <map>
+    <entry key-ref="p" value-ref="S1"/>
+	<entry key-ref="p1" value-ref="S2"/>
+	<entry key-ref="p2" value-ref="S3"/>
+    </map>
+    
+    </property>
+    <property name="personList">
+    
+    <list>
+     <ref bean="p"/>
+    <ref bean="p1"/>
+        <ref bean="p2"/>
+            <ref bean="p3"/>
+                <ref bean="p4"/>
+                   
+    </list>
+    </property>
+ 
+ </bean>
+
+
+</beans>

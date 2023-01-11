@@ -1,0 +1,11 @@
+package com.masai.Entity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class SalaryEmployee extends Employee{
+	
+	private Integer salary;
+	
+
+}

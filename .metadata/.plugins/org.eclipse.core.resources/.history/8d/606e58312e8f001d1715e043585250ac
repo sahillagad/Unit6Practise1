@@ -1,0 +1,16 @@
+package com.masai.Usecase;
+
+import javax.persistence.EntityManager;
+
+import com.masai.Utility.EMUtility;
+
+public class AddCustomer {
+
+	public static void main(String[] args) {
+		
+
+		
+		
+		
+	}
+}

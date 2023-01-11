@@ -1,0 +1,15 @@
+package com.masai;
+
+public class A {
+
+	
+	private B b;
+	
+	
+	public void funB() {
+		
+		System.out.println("I am Inside The A class Of FunA() Method");
+		b.funB();
+	}
+	
+}

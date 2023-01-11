@@ -1,0 +1,6 @@
+package com.masai.Dao;
+
+public interface MessageService {
+
+	public void sendMessage(String message);
+}

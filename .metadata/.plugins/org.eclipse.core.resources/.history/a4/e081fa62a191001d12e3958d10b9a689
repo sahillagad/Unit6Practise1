@@ -1,0 +1,19 @@
+package Example1;
+
+public class B {
+
+	
+	A a=new A();
+	
+	public void funB() {
+		
+		System.out.println("I am Inside The B class inside the funB ");
+		a.funA();
+	}
+
+	public void funC() {
+		
+		System.out.println("I am Inside The B class inside the funC ");
+		a.funA();
+	}
+}

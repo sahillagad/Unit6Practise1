@@ -1,0 +1,39 @@
+package com.masai.Usecase;
+
+import java.util.Scanner;
+
+import com.masai.Dao.StudentDao;
+import com.masai.Dao.StudentDaoImpl;
+import com.masai.Entity.Collage;
+import com.masai.Entity.Student;
+
+public class GetCollage {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter College Id");
+		Integer collageId= sc.nextInt();
+		
+		
+		StudentDao dao=new StudentDaoImpl();
+		Collage collage=dao.getCollege(collageId);
+		
+		for(Student student:collage.getStudents()) {
+			
+			System.out.println(student);
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

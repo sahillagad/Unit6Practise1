@@ -1,0 +1,15 @@
+package com.masai;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
+@Repository
+public class SMSService implements MessageService{
+
+	@Override
+	public void sendMessage(String message) {
+
+	System.out.println("SMS : "+message);
+		
+	}
+}

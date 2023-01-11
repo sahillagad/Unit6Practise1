@@ -1,0 +1,11 @@
+package Example3;
+//Dependency class
+public class Car {
+
+//	Previouslu 
+	public void Go() {
+		
+		System.out.println("Car Is Start...");
+	}
+	
+}

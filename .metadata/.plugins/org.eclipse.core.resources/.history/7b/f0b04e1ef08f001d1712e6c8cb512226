@@ -1,0 +1,14 @@
+package com.masai;
+
+public class MessageProcessorImpl implements MessageProcessor{
+
+	MessageService messageService;
+
+	@Override
+	public void processMessage(String message){
+ 
+		
+		messageService.sendMessage(message);
+		
+	}
+}

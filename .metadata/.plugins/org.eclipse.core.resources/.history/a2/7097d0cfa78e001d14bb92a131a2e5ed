@@ -1,0 +1,86 @@
+package com.masai.Dao;
+
+import javax.persistence.EntityManager;
+
+import com.masai.Entity.Student;
+import com.masai.Utility.EMUtility;
+
+public class StudentDaoImpl implements StudentDao {
+
+	@Override
+	public String registeredStudent(Student student) {
+	 String result="Student Is Not Registered";
+	 EntityManager em=EMUtility.provideEntityManager();
+	
+	 
+	 em.getTransaction().begin();
+	 
+	 
+	 em.persist(student);
+	 result="Student Is Registered Successfully";
+	 
+	 em.getTransaction().commit();
+	 
+
+		return result;
+	}
+
+	@Override
+	public String UpdateStudent(Student student) {
+		String result="Student Is Not Update...";
+		EntityManager em=EMUtility.provideEntityManager();
+		Student student2= em.find(Student.class,student.getStudentRoll());
+		
+		
+		if(student2!=null) {
+			em.getTransaction().begin();
+			
+			if(student.getCollage()!=null) {
+				
+				student2.setCollage(student.getCollage());
+			   result="Student Is Update Successfully...";
+				
+			}
+	       if(student.getEmail()!=null) {
+				
+				student2.setEmail(student.getEmail());
+				result="Student Is Update Successfully...";
+				
+		    }
+	       if(student.getMobileNumber()!=null) {
+				
+				student2.setMobileNumber(student.getMobileNumber());
+				result="Student Is Update Successfully...";
+				
+		    }
+	       
+	       if(student.getStudentName()!=null) {
+				
+	    	   student2.setStudentName(student.getStudentName());
+	    	   result="Student Is Update Successfully...";
+				
+		    }
+	       
+			em.getTransaction().commit();
+             em.close();			
+		}
+		else {
+			result="Invalid Student Roll Number";	
+		}	
+		return result;
+	}
+
+	@Override
+	public Student getStudentById(Integer roll) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteStudentBYID(Integer roll) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}

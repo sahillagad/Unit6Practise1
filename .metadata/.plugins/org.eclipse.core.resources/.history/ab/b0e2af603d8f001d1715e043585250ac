@@ -1,0 +1,29 @@
+package com.masai.Utility;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class EMUtility {
+
+	
+	
+	private static EntityManagerFactory emf;
+	
+	
+	static {
+		
+		emf=Persistence.createEntityManagerFactory("");
+		
+	}
+	
+	public EntityManager provideEmEntityManager() {
+		
+		
+		EntityManager em=emf.createEntityManager();
+		
+		
+		
+		return em;
+	}
+}

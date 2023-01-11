@@ -1,0 +1,15 @@
+package com.masai;
+
+public class Car {
+
+	public void bike() {
+		
+		System.out.println("Start Bike ");
+	}
+	
+	@Override
+	public void GO() {
+		bike();
+		
+	}
+}
