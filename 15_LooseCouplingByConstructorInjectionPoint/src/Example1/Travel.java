@@ -1,0 +1,23 @@
+package Example1;
+
+public class Travel extends Car{
+
+	
+	Vechical vechical;
+	
+	//Constructor Injection Point
+	public Travel(Vechical vechical) {
+		
+		this.vechical=vechical;
+		
+	}
+	
+	
+	public void journey() {
+		
+		System.out.println("Hello My Name Is sahil & I am ");
+		vechical.go();
+	}
+	
+	
+}
